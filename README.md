@@ -30,6 +30,9 @@ When the user gets stuck between multiple options, the application isolates the 
 ### 3. Real-Time Accountability 
 
 Once a priority is set, the user enters a live "body doubling" session. Through a real-time connection (WebSockets), a focus partner (or the system itself) provides accountability. The server monitors progress and helps maintain attention until the goal is completed.
+
+![Mesaj alternativ](screenshot.png)
+
 ## Architecture
 
 The project is structured as a monorepo with two primary components:
