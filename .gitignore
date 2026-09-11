@@ -1,0 +1,29 @@
+# Build output
+build/
+*/build/
+*/*/build/
+.gradle/
+
+# IDE
+.idea/
+*.iml
+
+# Secrete locale
+application-dev.yml
+application-*.yml
+!application.yml
+
+
+### Node / React (frontend) ###
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.local
+frontend/*.local
+
+### OS ###
+.DS_Store
+Thumbs.db
+
+### Logs ###
+*.log

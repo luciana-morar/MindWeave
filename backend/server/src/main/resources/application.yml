@@ -2,22 +2,17 @@ spring:
   application:
     name: mindweave-backend
 
-  # Configurare PostgreSQL
   datasource:
     url: jdbc:postgresql://localhost:5432/mindweave_db
-    username: postgres
-    password: postgres
+    username: ${DB_USERNAME:postgres}
+    password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
-  # Configurare Flyway pentru migr?ri automate
   flyway:
-    url: jdbc:postgresql://localhost:5432/mindweave_db
-    user: postgres
-    password: postgres
     baseline-on-migrate: true
 
   neo4j:
     uri: bolt://localhost:7687
     authentication:
-      username: neo4j
-      password: mindweave
+      username: ${NEO4J_USERNAME:neo4j}
+      password: ${NEO4J_PASSWORD}

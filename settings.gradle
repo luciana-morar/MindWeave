@@ -1,0 +1,6 @@
+rootProject.name = 'mindweave'
+
+include 'backend:domain'
+include 'backend:application'
+include 'backend:infrastructure'
+include 'backend:server'

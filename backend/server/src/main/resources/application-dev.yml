@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    password: postgres
+  neo4j:
+    authentication:
+      password: mindweave
