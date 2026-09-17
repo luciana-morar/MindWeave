@@ -1,0 +1,14 @@
+CREATE EXTENSION IF NOT EXISTS pgcrypto;
+
+ALTER TABLE users
+    ADD COLUMN email VARCHAR(255) NOT NULL,
+    ADD COLUMN password VARCHAR(255) NOT NULL;
+
+ALTER TABLE users
+    ALTER COLUMN id DROP DEFAULT,
+ALTER COLUMN id TYPE UUID USING id::text::uuid,
+    ALTER COLUMN id SET DEFAULT gen_random_uuid();
+
+CREATE UNIQUE INDEX uq_users_email ON users(email);
+
+DROP SEQUENCE IF EXISTS users_id_seq;
